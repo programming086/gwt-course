@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class TestGWT_8 implements EntryPoint, ClickHandler, KeyPressHandler {
+public class TestGWT_9 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 	private StringServiceAsync stringService = GWT.create(StringService.class);
 
@@ -56,13 +56,15 @@ public class TestGWT_8 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 			@Override
 			public void onSuccess(CallResult result) {
+				labelResult.setStyleName("common");
 				labelResult.setText(result.getText() + " (" + result.getCode() + ")");
 
 			}
 
 			@Override
 			public void onFailure(Throwable caught) {
-				// TODO Auto-generated method stub
+				labelResult.setStyleName("error");
+				labelResult.setText(caught.getMessage());
 
 			}
 		});

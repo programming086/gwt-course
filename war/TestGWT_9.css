@@ -45,3 +45,11 @@ table td{
 	font-size: 25px;
 	color:green;
 }
+
+.error{
+	color:red;
+}
+
+.common{
+	color:black;
+}

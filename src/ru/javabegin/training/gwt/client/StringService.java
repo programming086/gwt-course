@@ -11,5 +11,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("check")
 public interface StringService extends RemoteService {
-	CallResult checkString(CallInput input);
+	CallResult checkString(CallInput input) throws Exception;
 }
