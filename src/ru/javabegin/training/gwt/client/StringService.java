@@ -1,5 +1,8 @@
 package ru.javabegin.training.gwt.client;
 
+import ru.javabegin.training.gwt.client.objects.CallInput;
+import ru.javabegin.training.gwt.client.objects.CallResult;
+
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -8,5 +11,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("check")
 public interface StringService extends RemoteService {
-	String checkString(String text);
+	CallResult checkString(CallInput input);
 }

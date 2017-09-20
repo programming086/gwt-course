@@ -1,5 +1,8 @@
 package ru.javabegin.training.gwt.client;
 
+import ru.javabegin.training.gwt.client.objects.CallInput;
+import ru.javabegin.training.gwt.client.objects.CallResult;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -13,7 +16,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class TestGWT_6 implements EntryPoint, ClickHandler, KeyPressHandler {
+public class TestGWT_8 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 	private StringServiceAsync stringService = GWT.create(StringService.class);
 
@@ -45,11 +48,15 @@ public class TestGWT_6 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 	@Override
 	public void onClick(ClickEvent event) {
-		stringService.checkString(textBox.getText(), new AsyncCallback<String>() {
+
+		CallInput callInput = new CallInput();
+		callInput.setText(textBox.getText());
+
+		stringService.checkString(callInput, new AsyncCallback<CallResult>() {
 
 			@Override
-			public void onSuccess(String result) {
-				labelResult.setText(result);
+			public void onSuccess(CallResult result) {
+				labelResult.setText(result.getText() + " (" + result.getCode() + ")");
 
 			}
 
