@@ -7,18 +7,18 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>stringServiceServlet</servlet-name>
-    <servlet-class>ru.javabegin.training.gwt.server.StringServiceImpl</servlet-class>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>ru.javabegin.training.gwt.server.GreetingServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>stringServiceServlet</servlet-name>
-    <url-pattern>/testgwt_10/check</url-pattern>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/testgwt_16/greet</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>TestGWT_10.html</welcome-file>
+    <welcome-file>TestGWT_16.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

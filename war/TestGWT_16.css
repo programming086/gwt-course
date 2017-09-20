@@ -32,24 +32,3 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
-
-.redButton{
-	color: red;
-}
-
-table td{
-	padding:10px;
-}
-
-.counter{
-	font-size: 25px;
-	color:green;
-}
-
-.error{
-	color:red;
-}
-
-.common{
-	color:black;
-}

@@ -1,4 +1,4 @@
-package ru.javabegin.training.gwt.validator;
+package ru.javabegin.training.gwt.shared;
 
 /**
  * <p>
