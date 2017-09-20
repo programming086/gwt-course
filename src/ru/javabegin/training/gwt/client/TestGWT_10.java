@@ -2,6 +2,7 @@ package ru.javabegin.training.gwt.client;
 
 import ru.javabegin.training.gwt.client.objects.CallInput;
 import ru.javabegin.training.gwt.client.objects.CallResult;
+import ru.javabegin.training.gwt.validator.FieldVerifier;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -16,7 +17,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class TestGWT_9 implements EntryPoint, ClickHandler, KeyPressHandler {
+public class TestGWT_10 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 	private StringServiceAsync stringService = GWT.create(StringService.class);
 
@@ -48,6 +49,12 @@ public class TestGWT_9 implements EntryPoint, ClickHandler, KeyPressHandler {
 
 	@Override
 	public void onClick(ClickEvent event) {
+
+		if (!FieldVerifier.isValidName(textBox.getText())) {
+			labelResult.setStyleName("error");
+			labelResult.setText("Текст неверный");
+			return;
+		}
 
 		CallInput callInput = new CallInput();
 		callInput.setText(textBox.getText());

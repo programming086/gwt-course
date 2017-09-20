@@ -13,12 +13,12 @@
   
   <servlet-mapping>
     <servlet-name>stringServiceServlet</servlet-name>
-    <url-pattern>/testgwt_9/check</url-pattern>
+    <url-pattern>/testgwt_10/check</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>TestGWT_9.html</welcome-file>
+    <welcome-file>TestGWT_10.html</welcome-file>
   </welcome-file-list>
 
 </web-app>
