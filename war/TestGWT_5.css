@@ -40,3 +40,8 @@ h1 {
 table td{
 	padding:10px;
 }
+
+.counter{
+	font-size: 25px;
+	color:green;
+}
